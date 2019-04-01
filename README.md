@@ -7,7 +7,9 @@
 ######################################
 ######################################
 
-# MDN LINK HERE FOR BALL BOUNCING IN VANILLA
+#MDN https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
+
+^^^a resource I will use alot through this^^
 
 #### Overview
 
