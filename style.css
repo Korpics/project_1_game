@@ -1,0 +1,42 @@
+
+html, body {
+  margin: 0;
+  height: 100%;
+  border-left:50px;
+  border-right:50px;
+  border-style: solid;
+  border-color: black;
+  justify-content: center;
+  background-color: lightpink;
+}
+
+canvas{
+	margin-left: 400px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+h2{
+	font-size: 14px;
+	margin-left: 20px;
+	font-family: 'Rubik', sans-serif;
+	margin-top: 20px;
+}
+h1{
+	margin-top: 40px;
+	text-align: center;
+	font-family: 'Fredoka One', sans-serif;
+}
+.instruct{
+	font-family: 'Fredoka One', sans-serif;	
+	text-align: center;
+	font-size: 16px;
+	float: right;
+	margin-right: 50px;
+}
+.middle{
+	text-align: center;
+	font-size: 25px;
+	font-weight: solid;
+	font-family: 'Amatic SC', cursive;
+}

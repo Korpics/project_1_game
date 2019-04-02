@@ -7,6 +7,13 @@
 ######################################
 ######################################
 
+
+!!!!!
+GAME HAS CHANGED APRIL 2nd 2019 per Dan's Approval.
+WILL NOW BE FEEDING THE DOG FALLING BONES (sprite moves on x axis and catches fallings objects)
+DOG WILL STILL BE BIG AND HAPPY
+!!!!!!
+
 #MDN https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 ^^^a resource I will use alot through this^^
