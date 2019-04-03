@@ -1,6 +1,6 @@
-//player
-let player = '';
-let playerimage ='';
+//user
+let user = '';
+let userImage ='';
 let theBoneImage = '';
 let theBone = '';
 let doggyDone = '';
@@ -18,13 +18,13 @@ function setup() {
   instructions();
 //creates the canvas
   createCanvas(500,500)
-//depicts the specifications of players/enemies position on canvas.
-  player = createSprite(width / 2, height - 25, 48, 48)
+//depicts the specifications of users/enemies position on canvas.
+  user = createSprite(width / 2, height - 25, 48, 48)
   theBone = createSprite(width / 2, 0, 10, 20)
 
 }
 
-//alerts that inform player of the controls to this game.
+//alerts that inform user of the controls to this game.
 //called in setup function.
 function instructions(){
   let instrucTions = alert('Left & Right arrow keys to move le dog');
@@ -43,7 +43,7 @@ function draw() {
   }
 //if doggy is still playing - play until the overlap occurs. 
   else {
-    if (theBone.overlap(player)) {
+    if (theBone.overlap(user)) {
 //this is to change position of x so that the falling object relocates on x axis each time this runs
 //random() is awesome and can be read up on here http//p5js.org/reference/#p5/random. In this regard I am using the min,max arguments.      
       theBone.position.x = random(5, width - 5)
@@ -64,19 +64,19 @@ function drawInstruct(){
   background(0, 0, 100)
 //p5 function to draw sprite on canvas
   drawSprites()
-//player moves across x axis via keycode(left/right arrow) (adjustment in width is due to the sprite moving halfway off screen)
-  if (keyDown(RIGHT_ARROW) && player.position.x < width -25) {
-      player.position.x = player.position.x + 10
-}   if (keyDown(LEFT_ARROW) && player.position.x > 25) {
-      player.position.x = player.position.x - 10
-}   if (keyDown(UP_ARROW) && keyDown(RIGHT_ARROW) && player.position.x < width -25) {
-      player.position.x = player.position.x + 12
-}   if (keyDown(UP_ARROW) && keyDown(LEFT_ARROW) && player.position.x > 25) {
-      player.position.x = player.position.x - 12
-}   if (keyDown(UP_ARROW) && player.position.x < width -25) {
-      player.position.x = player.position.x + 7
-}   if (keyDown(DOWN_ARROW) && player.position.x > 25) {
-      player.position.x = player.position.x - 7
+//user moves across x axis via keycode(left/right arrow) (adjustment in width is due to the sprite moving halfway off screen)
+  if (keyDown(RIGHT_ARROW) && user.position.x < width -25) {
+      user.position.x = user.position.x + 10
+}   if (keyDown(LEFT_ARROW) && user.position.x > 25) {
+      user.position.x = user.position.x - 10
+}   if (keyDown(UP_ARROW) && keyDown(RIGHT_ARROW) && user.position.x < width -25) {
+      user.position.x = user.position.x + 12
+}   if (keyDown(UP_ARROW) && keyDown(LEFT_ARROW) && user.position.x > 25) {
+      user.position.x = user.position.x - 12
+}   if (keyDown(UP_ARROW) && user.position.x < width -25) {
+      user.position.x = user.position.x + 7
+}   if (keyDown(DOWN_ARROW) && user.position.x > 25) {
+      user.position.x = user.position.x - 7
 }
 //theBone falling down vertically
   theBone.position.y = theBone.position.y + 9
@@ -89,7 +89,7 @@ function drawInstruct(){
 }
 
 
-
+//research suggested to use preLoad when using images. currently having issues with this.
 /*function preload(){
 }
 */
@@ -124,7 +124,7 @@ function updateScore(){
   scorehtml.innerHTML = `${theScore}`
 }*/
 //AWESOME p5 feature below. http//p5js.org/reference/#p5/mouseClicked
-//sets the canvas back to a gamePlaying state (doggyDone false) and resets the coordinates of both player and theBone(fallingobject)
+//sets the canvas back to a gamePlaying state (doggyDone false) and resets the coordinates of both user and theBone(fallingobject)
 //essentially, this is a restart game function.
 
 
@@ -135,16 +135,16 @@ function mouseClicked(){
    if (doggyDone) {
   doggyDone = false
   theScore = 0
-  player.position.x = width / 2
-    player.position.y = height - 25
+  user.position.x = width / 2
+    user.position.y = height - 25
     theBone.position.x = width / 2
     theBone.position.y = 0
-  } else{console.log('mouse click workin here')}
+  } else{console.log('mouse click workin here but you aint done bud')}
 }
 
 
 
-//event listener (copied this code from stackoverflow) that disables the defaulted use of space and arrow keys (aka anything to scroll the window)
+//event listener (COPIED THIS FUNCTION FROM STACKOVERFLOW) that disables the defaulted use of space and arrow keys (aka anything to scroll the window)
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
     if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
