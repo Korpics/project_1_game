@@ -14,8 +14,7 @@ https://user-images.githubusercontent.com/41846870/55630951-eb825e80-5784-11e9-8
 
 !!!!!
 GAME HAS CHANGED APRIL 2nd 2019 per Dan's Approval.
-WILL NOW BE FEEDING THE DOG FALLING BONES (sprite moves on x axis and catches fallings objects)
-DOG WILL STILL BE BIG AND HAPPY
+Dog will now catch falling items. Dog will still be happy.
 !!!!!!
 
 #### OverDOGGYview
