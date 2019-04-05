@@ -4,12 +4,11 @@
 **Charles Korpics**
 **Unit-1 Project SEI**
 
-######################################
-######################################
-GAME IS AVAILABLE HERE
+
+#### GAME IS AVAILABLE HERE
 [http://charles-dawg.surge.sh]
 
-link to screenshot
+#### link to screenshot
 https://user-images.githubusercontent.com/41846870/55630951-eb825e80-5784-11e9-8d98-b5528c3de669.png
 
 
