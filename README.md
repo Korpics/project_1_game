@@ -12,10 +12,9 @@
 https://user-images.githubusercontent.com/41846870/55630951-eb825e80-5784-11e9-8d98-b5528c3de669.png
 
 
-!!!!!
-GAME HAS CHANGED APRIL 2nd 2019 per Dan's Approval.
+#### GAME HAS CHANGED APRIL 2nd 2019 per Dan's Approval.
 Dog will now catch falling items. Dog will still be happy.
-!!!!!!
+
 
 #### OverDOGGYview
 
@@ -24,7 +23,7 @@ Feed Le Dawg
 The goal of this game is to 'catch' each ham that falls down from the top y axis. 
 The dog is moveable along the x axis - and any overlap will result in a 'catch'. 
 
->=15 catches will result in a win.
+> >=15 catches will result in a win.
 
 ---
 
