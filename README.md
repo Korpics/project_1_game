@@ -1,13 +1,15 @@
 ####
 
-**BIG HAPPY DOGGY**
+**LE DAWG**
 **Charles Korpics**
 **Unit-1 Project SEI**
 
 ######################################
 ######################################
+GAME IS AVAILABLE HERE
+[http://charles-dawg.surge.sh]
 
-
+link to screenshot
 https://user-images.githubusercontent.com/41846870/55630951-eb825e80-5784-11e9-8d98-b5528c3de669.png
 
 
@@ -17,7 +19,7 @@ WILL NOW BE FEEDING THE DOG FALLING BONES (sprite moves on x axis and catches fa
 DOG WILL STILL BE BIG AND HAPPY
 !!!!!!
 
-#### Overview
+#### OverDOGGYview
 
 Feed Le Dawg 
 
