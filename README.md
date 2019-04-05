@@ -52,10 +52,20 @@ The dog is moveable along the x axis - and any overlap will result in a 'catch'.
 #### Starter Code
 
 setup() - sets up canvas, presents game controls and sets sprite positioning.
+
+
 draw() - runs continuously  after initial setup()
+
+
 drawInstruct() - the conditions allowed for movement and the various speeds
+
+
 gameOver() - checks the state of the game once theHam has met x,0 and informs the user of their amount of 'catches' + whether they have won or loss.
+
+
 mouseClicked() - reverts the gamestate if doggyDone == true and resets the coordinates of both the user and other sprite. will not impact performance as doggyDone is false until an ending has been met.
+
+
 eventlistener - added to be sure that my controls that modulate the speed do not impact the window scroll. (space - up/down arrow keys)
 
 
