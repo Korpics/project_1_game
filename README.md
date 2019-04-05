@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/41846870/55630951-eb825e80-5784-11e9-8
 Dog will now catch falling items. Dog will still be happy.
 
 
-#### OverDOGGYview
+#### Overview
 
 Feed Le Dawg 
 
@@ -69,6 +69,8 @@ mouseClicked() - reverts the gamestate if doggyDone == true and resets the coord
 
 
 eventlistener - added to be sure that my controls that modulate the speed do not impact the window scroll. (space - up/down arrow keys)
+
+preload() - loads images to be used with associated sprites.
 
 
 
