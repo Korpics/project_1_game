@@ -23,7 +23,7 @@ Feed Le Dawg
 The goal of this game is to 'catch' each ham that falls down from the top y axis. 
 The dog is moveable along the x axis - and any overlap will result in a 'catch'. 
 
-> >=15 catches will result in a win.
+> AT LEAST 15 catches will result in a win.
 
 ---
 
