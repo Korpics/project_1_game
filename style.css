@@ -1,21 +1,26 @@
 
-html, body {
-  margin: 0;
-  height: 100%;
+ body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  background-color: lightpink;
+  align-items: center;
+}
+
+html{
+
+  border-style: solid;
+  border-color: black;
   border-left:50px;
   border-right:50px;
   border-bottom: 10px;
   border-top: 5px;
-  border-style: solid;
-  border-color: black;
-  justify-content: center;
-  background-color: lightpink;
 }
 
-canvas{
-	margin-left: 380px;
-	margin-top: 30px;
-	margin-bottom: 100px;
+canvas{	
+	background-color: rgba(173,216,230 ,1 );
+
 }
 
 h2{
@@ -42,3 +47,4 @@ h1{
 	font-weight: solid;
 	font-family: 'Amatic SC', cursive;
 }
+

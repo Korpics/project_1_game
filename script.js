@@ -1,4 +1,3 @@
-//user
 let user = '';
 let userImage = '';
 let theBoneImage = '';
@@ -33,14 +32,15 @@ function setup() {
     let theScore = 0;
     instructions();
 //creates the canvas//
-  //!!tried to grab the h2 that shows score!!//
-  //let h2 = document.getElementById('scorehere')
+    h2 = createElement('h2',`Current Score: ${theScore}`)
     createCanvas(500,500)
+    userImage.resize(60, 50)
+    theBoneImage.resize(40,40)
 //depicts the specifications of users/enemies position on canvas.//
-    user = createSprite(width / 2, height - 25, 48, 48)
-    //user.addImage('userImage');
-    theBone = createSprite(width / 2, 0, 10, 20)
-
+    user = createSprite(width / 2, height-(userImage.height/2), 0, 0)
+    user.addImage(userImage)
+    theBone = createSprite(width / 2, 0, 0, 0)
+    theBone.addImage(theBoneImage)
 }
 
 //alerts that inform user of the controls to this game.//
@@ -56,6 +56,8 @@ function instructions(){
 
 //this function is repeatedly ran once setup is complete.//
 function draw() {
+  userImage.resize(60, 50)
+  theBoneImage.resize(40,40)
 //if the dog has failed or the game is not being played anymore - run gameOver.//
   if (doggyDone === true) {
       gameOver()
@@ -67,13 +69,7 @@ function draw() {
       theBone.position.x = random(5, width - 5)
       theBone.position.y = random(5, length - 5)
       theScore = theScore + 1
-
-    //!!tried to update score below but 'can not set the innerHTML or text of null'//     
-      //updateScore();
-      // let h2 = document.querySelector('#scorehere')
-  //!!more score updating attempts!! only leaving for reference will delete when solution is found.//
-   // h2.html(`${theScore}`)
-   // h2.innerText(`Current Score is: ${theScore}`)
+      h2.html(`Current Score: ${theScore}`)
       drawInstruct();
 } else {
       drawInstruct();
@@ -87,21 +83,21 @@ function drawInstruct(){
 //p5 function to draw sprite on canvas//
   drawSprites()
 //user moves across x axis via keycode(left/right arrow) (adjustment in width is due to the sprite moving halfway off screen)//
-  if (keyDown(RIGHT_ARROW) && user.position.x < width -25) {
-      user.position.x = user.position.x + 10
-}   if (keyDown(LEFT_ARROW) && user.position.x > 25) {
-      user.position.x = user.position.x - 10
-}   if (keyDown(UP_ARROW) && keyDown(RIGHT_ARROW) && user.position.x < width -25) {
-      user.position.x = user.position.x + 12
-}   if (keyDown(UP_ARROW) && keyDown(LEFT_ARROW) && user.position.x > 25) {
-      user.position.x = user.position.x - 12
-}   if (keyDown(UP_ARROW) && user.position.x < width -25) {
-      user.position.x = user.position.x + 7
-}   if (keyDown(DOWN_ARROW) && user.position.x > 25) {
-      user.position.x = user.position.x - 7
+  if (keyDown(RIGHT_ARROW) && user.position.x < width-userImage.width/2) {
+      user.position.x = user.position.x + 9
+}   if (keyDown(LEFT_ARROW) && user.position.x > userImage.width/2) {
+      user.position.x = user.position.x - 9
+}   if (keyDown(UP_ARROW) && keyDown(RIGHT_ARROW) && user.position.x < width-userImage.width/2) {
+      user.position.x = user.position.x + 11
+}   if (keyDown(UP_ARROW) && keyDown(LEFT_ARROW) && user.position.x > userImage.width/2) {
+      user.position.x = user.position.x - 11
+}   if (keyDown(UP_ARROW) && user.position.x < width-userImage.width/2) {
+      user.position.x = user.position.x + 6
+}   if (keyDown(DOWN_ARROW) && user.position.x > userImage.width/2) {
+      user.position.x = user.position.x - 6
 }
 //theBone falling down vertically//
-    theBone.position.y = theBone.position.y + 9
+    theBone.position.y = theBone.position.y + 10
 //brings theBone back to the top once meeting(x,0)//
   if (theBone.position.y > height) {
       console.log(theScore);
@@ -112,62 +108,41 @@ function drawInstruct(){
 
 function gameOver(){
 //checks to see status of game state as well as current score and then provides you a win or loss//
-  if( doggyDone===true && theScore <= 20 && theScore >= 10){
+  if( doggyDone===true && theScore <= 25 && theScore >= 15){
 //textAlign takes two arguments but defaults this to CENTER, CENTER//
     textAlign(CENTER) 
     fill('white')
  //text to be entered within this 'prompt' at center of canvas. hense the / 2//
-    text(`Nice! you got over 10!`, width / 2, height / 2)
+    text(`Nice! you got over 15! This dog is satisfied.`, width / 2, height / 2)
 //same as above, except lower on y axis.// 
     text(`You made it to ${theScore}! click to play again`, width / 2, (3 * height) / 4)
-} else if ( doggyDone===true && theScore >= 20 && theScore <= 29){
+} else if ( doggyDone===true && theScore >= 26 && theScore <= 34){
     textAlign(CENTER) 
     fill('white')
-    text(`WAY over 10 bud. you win - but don't brag about it`, width / 2, height / 2)
-    text(`Ayy! You made it to ${theScore}! click to play again`, width / 2, (3 * height) / 4)
+    text(`WAY over 10. you win - but don't brag about it`, width / 2, height / 2)
+    text(`That's a happy dog! You made it to ${theScore}! click to play again`, width / 2, (3 * height) / 4)
 }
-else if (doggyDone===true && theScore >= 30){
+else if (doggyDone===true && theScore >= 35){
     textAlign(CENTER) 
     fill('white')
-    text(`YOU ARE REACHING DAD LEVELS OF EXPERTISE BRAG ABOUT IT`, width / 2, height / 2)
+    text(`YOU ARE REALLY GOOD AND DOG IS VERY HAPPY YES NICE GOOD STUFF`, width / 2, height / 2)
     text(`WINNNNER You made it to ${theScore}! click to play again`, width / 2, (3 * height) / 4)
 }
 else {
     background(0)
     textAlign(CENTER)
     fill('white')
-    text('You are not good at this (yet). Big loss bud. ', width / 2, height / 2)
+    text('You are not good at this (yet). Big loss pal. ', width / 2, height / 2)
     text('click anywhere with your mouse and get ya arrow keys ready.', width / 2, (3 * height) / 4)
 }
-    console.log('im workin here!')
-}
-
-//research suggested to use preLoad when using images. currently having issues with this.//
-
-
-/* 
-
-!!!!!PRELOAD
-
-function preload(){
-  //loadImage('images/sadDog.png')
-  let theDog = loadImage('happyDog.png')
-  //loadImage('images/happiestDog.png')
 }
 
 
-!!!!!SCORE
-
-//futile attempts at an update score function to interact with dom. would like to avoid p5.dom.//
-function updateScore(){
-  let scorehtml = document.querySelector('h2')
-  scorehtml.innerHTML = `${theScore}`
-}*/
 
 
 
 
-//AWESOME p5 feature below. http//p5js.org/reference/#p5/mouseClicked//
+//useful p5 feature below. http//p5js.org/reference/#p5/mouseClicked//
 //sets the canvas back to a gamePlaying state (doggyDone false) and resets the coordinates of both user and theBone(fallingobject)//
 //essentially, this is a restart game function.//
 function mouseClicked(){
@@ -178,13 +153,22 @@ function mouseClicked(){
     theScore = 0
     //width is relative to canvas. sets user in middle of x axis.// 
     user.position.x = width / 2
-    user.position.y = height - 25
+    user.position.y = height-(userImage.height/2)
     theBone.position.x = width / 2
     theBone.position.y = 0
 } else {
     console.log('mouse click workin here but you aint done bud')
 }
 }
+
+function preload(){
+  userImage = loadImage('https://i.imgur.com/DIbtfLX.gif')
+  theBoneImage = loadImage('https://i.imgur.com/7zU3Xfe.png')
+}
+
+
+
+
 
 
 
