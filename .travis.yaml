@@ -1,0 +1,4 @@
+language: javascript
+npm:
+ - 6.11.3
+ - p5
